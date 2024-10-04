@@ -1,0 +1,38 @@
+{
+
+	"nodes" :
+		[
+			{
+				"node" : "A",
+				"edges" :	[
+								{
+									"edgeTo" : "B",
+									"weight" : 1
+								}
+							]
+			},
+			{
+				"node" : "B",
+				"edges" :	[
+								{
+									"edgeTo" : "A",
+									"weight" : 2
+								},
+								{
+									"edgeTo" : "C",
+									"weight" : 5
+								}
+							]
+			},
+			{
+				"node" : "C",
+				"edges" :	[
+								{
+									"edgeTo" : "B",
+									"weight" : 2.5
+								}
+							]
+			}
+		]
+	
+}

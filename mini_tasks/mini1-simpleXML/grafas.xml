@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<grafai>
+	<grafas>
+		<virsunes>
+			<virsune>A</virsune>
+			<virsune>B</virsune>
+			<virsune>C</virsune>
+			<virsune>D</virsune>
+		</virsunes>
+		<briaunos>
+			<briauna>
+				<pradzia>A</pradzia>
+				<pabaiga>B</pabaiga>
+			</briauna>
+			<briauna>
+				<pradzia>A</pradzia>
+				<pabaiga>C</pabaiga>
+			</briauna>
+			<briauna>
+				<pradzia>B</pradzia>
+				<pabaiga>C</pabaiga>
+			</briauna>
+			<briauna>
+				<pradzia>C</pradzia>
+				<pabaiga>D</pabaiga>
+			</briauna>
+		</briaunos>
+	</grafas>
+</grafai>
