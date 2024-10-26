@@ -1,0 +1,67 @@
+1. /continents/continent[1]/coun:country[2]
+Ancestor:
+/descendant::country[2]/ancestor::geo:continent/@continent_name
+/descendant::country[2]/descendant::*[position() mod 2 = 0]
+/descendant::country[2]/following-sibling::country/language
+/descendant::country[2]/preceding-sibling::country/language
+/descendant::country[2]/following::geo:continent[@continent_name="Asia"]
+/descendant::country[2]/preceding::*
+
+2.
+   /descendant::country[language=/descendant::country[5]/language]/name
+
+3. grazins 28
+is viso tekstiniu zymiu: count(//*[text()]),
+  zymes "founded" suma sum(/descendant::founded[text()])
+
+4. 5 + "kuku" = NaN
+   true() = "kuku" yra true
+   true() + 1 = 2
+   5 < "kuku" = false
+
+5. /descendant::country[3]/preceding-sibling::country[name="Lithuania"]/government
+
+pirmas zingsnis
+       <country region="Scandinavia">
+            <name>Sweden</name>
+            <capital>Stockholm</capital>
+            <language>Swedish</language>
+            <area measurement="square km" unit="million">450.295</area>
+            <population date="2021-07-07" unit="million">10.54</population>
+            <government type="Monarchy">
+                <head_of_state>Carl XVI Gustaf</head_of_state>
+                <head_of_government>Ulf Kristersson</head_of_government>
+            </government>
+            <founded></founded>
+        </country>
+
+antras zingsnis:
+        <country region="Baltics">
+            <name>Lithuania</name>
+            <capital>Vilnius</capital>
+            <language>Lithuanian</language>
+            <area measurement="square km" unit="million">65.300</area>
+            <population date="2024-10-14" unit="million">2.85</population>
+            <government type="Republic">
+                <head_of_state>Gitanas Nausėda</head_of_state>
+                <head_of_government>Ingrida Šimonytė</head_of_government>
+            </government>
+            <founded>1254</founded>
+        </country>
+
+trecias zingsnis:
+
+            <government type="Republic">
+                <head_of_state>Gitanas Nausėda</head_of_state>
+                <head_of_government>Ingrida Šimonytė</head_of_government>
+            </government>
+
+6.
+
+Aibe ir skaicius: /descendant::founded = 1871
+AIbe ir eilute: /descendant::country/@region = "Baltics"
+Aibe ir logine israiska: /descendant::government[@type="Monarchy"] != false()
+Aibe su aibe /descendant::head_of_state = /descendant::head_of_government
+
+7. /descendant::geo:continent[1]/country/founded < /descendant::geo:continent[2]/country/founded
+/descendant::area[2] > /descendant::area[3]

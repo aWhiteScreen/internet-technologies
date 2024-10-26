@@ -1,0 +1,117 @@
+<geo:continents xmlns:geo="https://example.com/geography"
+xmlns="https://example.com/country">  
+    <geo:continent continent_name="Europe">
+        <country region="Baltics">
+            <name>Lithuania</name>
+            <capital>Vilnius</capital>
+            <language>Lithuanian</language>
+            <area measurement="square km" unit="million">0.065</area>
+            <population date="2024-10-14" unit="million">2.85</population>
+            <government type="Republic">
+                <head_of_state>Gitanas Nausėda</head_of_state>
+                <head_of_government>Ingrida Šimonytė</head_of_government>
+            </government>
+            <founded>1253</founded>
+        </country>
+        <country region="Central Europe">
+            <name>Germany</name>
+            <capital>Berlin</capital>
+            <language>German</language>
+            <area measurement="square km" unit="million">0.358</area>
+            <population date="2022-05-15" unit="million">82.72</population>
+            <government type="Republic">
+                <head_of_state>Frank-Walter Steinmeier</head_of_state>
+                <head_of_government>Olaf Scholz</head_of_government>
+            </government>
+            <founded>1871</founded>
+        </country>
+        <country region="Scandinavia">
+            <name>Sweden</name>
+            <capital>Stockholm</capital>
+            <language>Swedish</language>
+            <area measurement="square km" unit="million">0.450</area>
+            <population date="2021-07-07" unit="million">10.54</population>
+            <government type="Monarchy">
+                <head_of_state>Carl XVI Gustaf</head_of_state>
+                <head_of_government>Ulf Kristersson</head_of_government>
+            </government>
+            <founded></founded>
+        </country>
+        <country region="Baltics">
+            <name>Latvia</name>
+            <capital>Riga</capital>
+            <language>Latvian</language>
+            <area measurement="square km" unit="million">0.065</area>
+            <population date="2022-09-24" unit="million">1.84</population>
+            <government type="Republic">
+                <head_of_state>Edgars Rinkēvičs</head_of_state>
+                <head_of_government>Evika Siliņa</head_of_government>
+            </government>
+            <founded>1918</founded>
+        </country>
+        <country region="Iberia">
+            <name>Spain</name>
+            <capital>Madrid</capital>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.506</area>
+            <population date="2022-07-01" unit="million">48.79</population>
+            <government type="Monarchy">
+                <head_of_state>Felipe VI</head_of_state>
+                <head_of_government>Pedro Sánchez</head_of_government>
+            </government>
+            <founded>1479</founded>
+        </country>
+    </geo:continent>
+    <geo:continent continent_name="North America">
+        <country region="Carrribean">
+            <name>Cuba</name>
+            <capital>Havana</capital>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.111</area>
+            <population date="2024-10-17" unit="million">10.96</population> 
+            <government type="Republic">
+                <head_of_state>Miguel Díaz-Canel</head_of_state>
+                <head_of_government>Manuel Marrero Cruz</head_of_government>
+            </government>
+            <founded>1868</founded>           
+        </country>
+        <country region="Central America">
+            <name>Honduras</name>
+            <capital>Tegucigalpa</capital>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.112</area>
+            <population date="2023-06-22" unit="million">9.57</population>
+            <government type="Republic">
+                <head_of_state>Xiomara Castro</head_of_state>
+                <head_of_government>Xiomara Castro</head_of_government>
+            </government>
+            <founded>1821</founded>      
+        </country>
+        <country region="USA">
+            <name>USA</name>
+            <capital>Washington D.C</capital>
+            <language></language>
+            <area measurement="square km" unit="million">3.796</area>
+            <population date="2023-06-22" unit="million">334.91</population>
+            <government type="Republic">
+                <head_of_state>Joe Biden</head_of_state>
+                <head_of_government>Joe Biden</head_of_government>
+            </government>
+            <founded>1776</founded>      
+        </country>
+    </geo:continent>
+    <geo:continent continent_name="Asia">
+        <country region="East Asia">
+            <name>Japan</name>
+            <capital>Tokyo</capital>
+            <language>Japanese</language>
+            <area measurement="square km">0.378</area>
+            <population date="2024-03-01" unit="million">123.97</population>
+            <government type="Monarchy">
+                <head_of_state>Naruhito</head_of_state>
+                <head_of_government>Shigeru Ishiba</head_of_government>
+            </government>
+            <founded>1890</founded>      
+        </country>
+    </geo:continent>
+</geo:continents>
