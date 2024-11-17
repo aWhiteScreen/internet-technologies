@@ -1,0 +1,182 @@
+<continents 
+xmlns="https://example.com/country">  
+    <continent continent_name="Europe">
+        <country region="Baltics">
+            <name>Lithuania</name>
+            <capital previous_capital="Kaunas">Vilnius</capital>
+            <largest_city>Vilnius</largest_city>
+            <language>Lithuanian</language>
+            <area measurement="square km" unit="million">0.065</area>
+            <population date="2024-10-14" unit="million">2.85</population>
+            <government type="Republic">
+                <head_of_state>Gitanas Nausėda</head_of_state>
+                <head_of_government>Ingrida Šimonytė</head_of_government>
+            </government>
+            <founded>1253</founded>
+            <brief_history>
+                The country was founded in <founded>1253</founded>. It's greatest leader is considered <great_person>Vytautas The Great</great_person>,
+                it is currently a <current_government>Republic</current_government>.
+            </brief_history>
+        </country>
+        <country region="Central Europe">
+            <name>Germany</name>
+            <capital>Berlin</capital>
+            <largest_city>Berlin</largest_city>
+            <language>German</language>
+            <area measurement="square km" unit="million">0.358</area>
+            <population date="2022-05-15" unit="million">82.72</population>
+            <government type="Republic">
+                <head_of_state>Frank-Walter Steinmeier</head_of_state>
+                <head_of_government>Olaf Scholz</head_of_government>
+            </government>
+            <founded>1871</founded>
+        </country>
+        <country region="Scandinavia">
+            <name>Sweden</name>
+            <capital>Stockholm</capital>
+            <largest_city>Stockholm</largest_city>
+            <language>Swedish</language>
+            <area measurement="square km" unit="million">0.450</area>
+            <population date="2021-07-07" unit="million">10.54</population>
+            <government type="Monarchy">
+                <head_of_state>Carl XVI Gustaf</head_of_state>
+                <head_of_government>Ulf Kristersson</head_of_government>
+            </government>
+            <founded>0098</founded>
+        </country>
+        <country region="Baltics">
+            <name>Latvia</name>
+            <capital>Riga</capital>
+            <largest_city>Riga</largest_city>
+            <language>Latvian</language>
+            <area measurement="square km" unit="million">0.065</area>
+            <population date="2022-09-24" unit="million">1.84</population>
+            <government type="Republic">
+                <head_of_state>Edgars Rinkēvičs</head_of_state>
+                <head_of_government>Evika Siliņa</head_of_government>
+            </government>
+            <founded>1918</founded>
+            <important_dates>1918-11-18 1921-01-26 1922-11-07 1991-08-21</important_dates>
+        </country>
+        <country region="Iberia">
+            <name>Spain</name>
+            <capital>Madrid</capital>
+            <largest_city>Madr Did</largest_city>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.506</area>
+            <population date="2022-07-01" unit="million">48.79</population>
+            <government type="Monarchy">
+                <head_of_state>Felipe VI</head_of_state>
+                <head_of_government>Pedro Sánchez</head_of_government>
+            </government>
+            <founded>1479</founded>
+        </country>
+        <country region="Balkans">
+            <name>Greece</name>
+            <capital>Athens</capital>
+            <largest_city>Athens</largest_city>
+            <language>Greek</language>
+            <area measurement="square km" unit="million">0.506</area>
+            <population date="2022-07-01" unit="million">48.79</population>
+            <government type="Monarchy">
+                <head_of_state>Felipe VI</head_of_state>
+                <head_of_government>Pedro Sánchez</head_of_government>
+            </government>
+            <founded>1479</founded>
+        </country>
+        <historic_country region="Mediterranean">
+            <name>Byzantine Empire</name>
+            <capital>Constantinople</capital>
+            <largest_city>Constantinople</largest_city>
+            <language>Latin</language>
+            <area measurement="square km" unit="million">2.500</area>
+            <population unit="million">26.00</population>
+            <government type="Monarchy">
+                <head_of_state>Constantine XI</head_of_state>
+                <head_of_government>Constantine XI</head_of_government>
+            </government>
+            <founded>1253</founded>
+            <brief_history>
+                The country was founded in <founded>0330</founded>. It's greatest leader is considered <great_person>Justinian I</great_person>,
+                it was a <current_government>Monarchy</current_government>.
+            </brief_history>
+            <dissolved>1453</dissolved>
+            <successor>Greece</successor>
+        </historic_country>
+        <historic_country region="Eastern Europe">
+            <name>Grand Duchy Of Lithuania</name>
+            <capital>Vilnius</capital>
+            <largest_city>Vilnius</largest_city>
+            <language>Various</language>
+            <area measurement="square km" unit="million">0.930</area>
+            <population unit="million">2.50</population>
+            <government type="Monarchy">
+                <head_of_state>Stanislaus II Augustus</head_of_state>
+                <head_of_government>Stanislaus II Augustus</head_of_government>
+            </government>
+            <founded>1569</founded>
+            <brief_history>
+                The country was founded in <founded>1253</founded>. It's greatest leader is considered <great_person>Vytautas The Great</great_person>,
+                it was a <current_government>Monarchy</current_government>.
+            </brief_history>
+            <dissolved>1795</dissolved>
+            <successor>Lithuania</successor>
+        </historic_country>
+    </continent>
+    <continent continent_name="North America">
+        <country region="Carrribean">
+            <name>Cuba</name>
+            <capital>Havana</capital>
+            <largest_city>Havana</largest_city>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.111</area>
+            <population date="2024-10-17" unit="million">10.96</population> 
+            <government type="Republic">
+                <head_of_state>Miguel Díaz-Canel</head_of_state>
+                <head_of_government>Manuel Marrero Cruz</head_of_government>
+            </government>
+            <founded>1868</founded>         
+        </country>
+        <country region="Central America">
+            <name>Honduras</name>
+            <capital>Tegucigalpa</capital>
+            <largest_city>Tegucigalpa</largest_city>
+            <language>Spanish</language>
+            <area measurement="square km" unit="million">0.112</area>
+            <population date="2023-06-22" unit="million">9.57</population>
+            <government type="Republic">
+                <head_of_state>Xiomara Castro</head_of_state>
+                <head_of_government>Xiomara Castro</head_of_government>
+            </government>
+            <founded>1821</founded>     
+        </country>
+        <country region="USA">
+            <name>USA</name>
+            <capital previous_capital="Philidelphia">Washington</capital>
+            <largest_city>NewYork</largest_city>
+            <language></language>
+            <area measurement="square km" unit="million">3.796</area>
+            <population date="2023-06-22" unit="million">334.91</population>
+            <government type="Republic">
+                <head_of_state>Joe Biden</head_of_state>
+                <head_of_government>Joe Biden</head_of_government>
+            </government>
+            <founded>1776</founded>    
+        </country>
+    </continent>
+    <continent continent_name="Asia">
+        <country region="East Asia">
+            <name>Japan</name>
+            <capital>Tokyo</capital>
+            <largest_city>Tokyo</largest_city>
+            <language>Japanese</language>
+            <area measurement="square km" unit="million">0.378</area>
+            <population date="2024-03-01" unit="million">123.97</population>
+            <government type="Monarchy">
+                <head_of_state>Naruhito</head_of_state>
+                <head_of_government>Shigeru Ishiba</head_of_government>
+            </government>
+            <founded>1890</founded>      
+        </country>
+    </continent>
+</continents>

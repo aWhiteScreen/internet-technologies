@@ -1,0 +1,216 @@
+{
+  "continents": [
+    {
+      "@continent_name": "Europe",
+      "countries": [
+        {
+          "@region": "Baltics",
+          "name": "Lithuania",
+          "capital": "Vilnius",
+          "language": "Lithuanian",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.065
+          },
+          "population": {
+            "@date": "2024-10-14",
+            "@unit": "million",
+            "#text": 2.85
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Gitanas Nausėda",
+            "head_of_government": "Ingrida Šimonytė"
+          },
+          "founded": 1253
+        },
+        {
+          "@region": "Central Europe",
+          "name": "Germany",
+          "capital": "Berlin",
+          "language": "German",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.358
+          },
+          "population": {
+            "@date": "2022-05-15",
+            "@unit": "million",
+            "#text": 82.72
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Frank-Walter Steinmeier",
+            "head_of_government": "Olaf Scholz"
+          },
+          "founded": 1871
+        },
+        {
+          "@region": "Scandinavia",
+          "name": "Sweden",
+          "capital": "Stockholm",
+          "language": "Swedish",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.450
+          },
+          "population": {
+            "@date": "2021-07-07",
+            "@unit": "million",
+            "#text": 10.54
+          },
+          "government": {
+            "@type": "Monarchy",
+            "head_of_state": "Carl XVI Gustaf",
+            "head_of_government": "Ulf Kristersson"
+          },
+          "founded": null
+        },
+        {
+          "@region": "Baltics",
+          "name": "Latvia",
+          "capital": "Riga",
+          "language": "Latvian",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.065
+          },
+          "population": {
+            "@date": "2022-09-24",
+            "@unit": "million",
+            "#text": 1.84
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Edgars Rinkēvičs",
+            "head_of_government": "Evika Siliņa"
+          },
+          "founded": 1918
+        },
+        {
+          "@region": "Iberia",
+          "name": "Spain",
+          "capital": "Madrid",
+          "language": "Spanish",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.506
+          },
+          "population": {
+            "@date": "2022-07-01",
+            "@unit": "million",
+            "#text": 48.79
+          },
+          "government": {
+            "@type": "Monarchy",
+            "head_of_state": "Felipe VI",
+            "head_of_government": "Pedro Sánchez"
+          },
+          "founded": 1479
+        }
+      ]
+    },
+    {
+      "@continent_name": "North America",
+      "countries": [
+        {
+          "@region": "Carrribean",
+          "name": "Cuba",
+          "capital": "Havana",
+          "language": "Spanish",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.111
+          },
+          "population": {
+            "@date": "2024-10-17",
+            "@unit": "million",
+            "#text": 10.96
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Miguel Díaz-Canel",
+            "head_of_government": "Manuel Marrero Cruz"
+          },
+          "founded": 1868
+        },
+        {
+          "@region": "Central America",
+          "name": "Honduras",
+          "capital": "Tegucigalpa",
+          "language": "Spanish",
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 0.112
+          },
+          "population": {
+            "@date": "2023-06-22",
+            "@unit": "million",
+            "#text": 9.57
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Xiomara Castro",
+            "head_of_government": "Xiomara Castro"
+          },
+          "founded": 1821
+        },
+        {
+          "@region": "USA",
+          "name": "USA",
+          "capital": "Washington D.C",
+          "language": null,
+          "area": {
+            "@measurement": "square km",
+            "@unit": "million",
+            "#text": 3.796
+          },
+          "population": {
+            "@date": "2023-06-22",
+            "@unit": "million",
+            "#text": 334.91
+          },
+          "government": {
+            "@type": "Republic",
+            "head_of_state": "Joe Biden",
+            "head_of_government": "Joe Biden"
+          },
+          "founded": 1776
+        }
+      ]
+    },
+    {
+      "@continent_name": "Asia",
+      "countries": [
+        {
+        "@region": "East Asia",
+        "name": "Japan",
+        "capital": "Tokyo",
+        "language": "Japanese",
+        "area": {
+          "@measurement": "square km",
+          "#text": 0.378
+        },
+        "population": {
+          "@date": "2024-03-01",
+          "@unit": "million",
+          "#text": 123.97
+        },
+        "government": {
+          "@type": "Monarchy",
+          "head_of_state": "Naruhito",
+          "head_of_government": "Shigeru Ishiba"
+        },
+        "founded": 1890
+        }
+      ]
+    }
+  ]
+}

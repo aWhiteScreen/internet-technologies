@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://example.com/country"
+xmlns="https://example.com/country"
+elementFormDefault="qualified"
+attributeFormDefault="unqualified"
+>
+
+    <xs:complexType name="capitalType">
+        <xs:simpleContent>
+            <xs:extension base="nameType">
+                <xs:attribute name="previous_capital" use="optional">
+                    <xs:simpleType>
+                        <xs:restriction base="nameType">
+                            <xs:minLength value="4"></xs:minLength>
+                            <xs:maxLength value="85"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-Z]*(\s[a-zA-Z]+)*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="badNameType">
+        <xs:restriction base="nameType">
+            <xs:pattern value="[0-9][a-zA-Z]*(\s[a-zA-Z]+)*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="importantDateList">
+        <xs:list itemType="xs:date"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="unitType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="million"></xs:enumeration>
+            <xs:enumeration value="thousand"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="measurementType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="square km"></xs:enumeration>
+            <xs:enumeration value="square mi"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="historicCountryType">
+        <xs:complexContent>
+            <xs:extension base="countryType">
+                <xs:sequence>
+                    <xs:element name="dissolved" type="xs:gYear"></xs:element>
+                    <xs:element name="successor" type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="governmentType">
+        <xs:sequence>
+            <xs:element name="head_of_state" type="xs:string">
+            </xs:element>
+            <xs:element name="head_of_government" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="type"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="restrictedGovernmentType">
+        <xs:complexContent>
+            <xs:restriction base="governmentType">
+                <xs:sequence>
+                    <xs:element name="head_of_state" type="xs:string"></xs:element>
+                    <xs:element name="head_of_government" type="xs:string"></xs:element>
+                </xs:sequence>
+                <xs:attribute name="type">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Republic"></xs:enumeration>
+                            <xs:enumeration value="Monarchy"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="populationType">
+        <xs:simpleContent>
+            <xs:extension base="xs:double">
+                <xs:attribute type="xs:date" name="date" use="optional"/>
+                <xs:attribute type="unitType" name="unit" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="areaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:double">
+                <xs:attribute type="measurementType" name="measurement" use="required"/>
+                <xs:attribute type="unitType" name="unit" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="countryType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="capital" type="capitalType"></xs:element>
+            <xs:element name="largest_city" type="nameType"/>
+            <xs:element name="language" type="xs:string"></xs:element>
+            <xs:element name="area" type="areaType"></xs:element>
+            <xs:element name="population" type="populationType"></xs:element>
+            <xs:element name="government" type="restrictedGovernmentType"></xs:element>
+            <xs:element name="founded" type="xs:gYear" minOccurs="0" maxOccurs="1"/>
+            <xs:choice>
+                <xs:element name="brief_history" minOccurs="0" maxOccurs="1">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="founded" type="xs:gYear"/>
+                            <xs:element name="great_person" type="xs:string"/>
+                            <xs:element name="current_government" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="important_dates" type="importantDateList" minOccurs="0" maxOccurs="1"></xs:element>        
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="region" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="continentType">
+        <xs:sequence>
+            <xs:element name="country" type="countryType"  minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="historic_country" type="historicCountryType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="continent_name" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="continentsType">
+        <xs:sequence>
+            <xs:element name="continent" type="continentType"  minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="continents" type="coun:continentsType" xmlns:coun="https://example.com/country">
+        <xs:key name="countryNameKey">
+            <xs:selector xpath="coun:continent/coun:country"/>
+            <xs:field xpath="coun:name"/>
+        </xs:key>
+        <xs:keyref name="historicCountryRef" refer="countryNameKey">
+            <xs:selector xpath="coun:continent/coun:historic_country"/>
+            <xs:field xpath="coun:successor"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

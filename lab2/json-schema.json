@@ -1,0 +1,112 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/country",
+    "title": "Country Schema",
+    "description": "JSON schema describing countries",
+    "type": "object",
+    
+    "properties": {
+        "continents": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 7,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@continent_name": {
+                        "type": "string"
+                    },
+                    "countries": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "$ref": "#/$defs/country"
+                        }
+                    }
+                },
+                "required": ["@continent_name", "countries"]
+            }
+        }
+    },
+    
+    "required": ["continents"],
+    
+    "$defs": {
+        "country": {
+            "type": "object",
+            "properties": {
+                "@region": { "type": "string" },
+                "name": {
+                    "type": "string",
+                    "anyOf": [
+                        { "pattern": "^(?:[A-Z][a-z]*)(?:\\s[A-Z][a-z]*)*$" },
+                        { "pattern": "^[A-Z]+$" }
+                    ]
+                },
+                "capital": {
+                    "allOf": [
+                        { "type": "string" },
+                        { "minLength": 4 },
+                        { "maxLength": 58 }
+                    ]
+                },
+                "language": {
+                    "oneOf": [
+                        { "type": "string" },
+                        { "type": "null" }
+                    ]
+                },
+                "area": { "$ref": "#/$defs/area" },
+                "population": { "$ref": "#/$defs/population" },
+                "government": { "$ref": "#/$defs/government" },
+                "founded": {
+                    "oneOf": [
+                        { "type": "integer" },
+                        { "type": "null" }
+                    ]
+                }
+            },
+            "required": ["@region", "name", "capital", "language", "area", "population", "government", "founded"]
+        },
+        
+        "area": {
+            "type": "object",
+            "properties": {
+                "@measurement": {
+                    "enum": ["square km", "square mi"]
+                },
+                "@unit": { "type": "string" },
+                "#text": {
+                    "type": "number",
+                    "minimum": 0.001
+                }
+            }
+        },
+        
+        "population": {
+            "type": "object",
+            "properties": {
+                "@date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "@unit": { "type": "string" },
+                "#text": {
+                    "type": "number",
+                    "minimum": 0.01
+                }
+            }
+        },
+        
+        "government": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "enum": ["Republic", "Monarchy"]
+                },
+                "@head_of_state": { "type": "string" },
+                "#head_of_government": { "type": "number" }
+            }
+        }
+    }
+}
