@@ -1,0 +1,1 @@
+//autorius[@id=//knyga[kaina=number(//grupe[1]/knyga[1]/kaina)]/autorius/@ref]/pavarde
