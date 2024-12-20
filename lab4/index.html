@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Country Name</label>
+        <input type="text" id="name">
+        <br>
+        <label for="founding">Year Of Founding</label>
+        <input type="number" id="founding">
+        <br>
+        <input type="submit" id="submit_button">
+    </form>
+
+    <img src="https://east-usa.com/world/images/Kazakhstan.jpg" alt="Map of Borat Country" height="200px" id="borat">
+
+    <br>
+
+    <table id="countryTable" border="1">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Founded</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <button id="load_button">Load Data</button>
+
+    <br>
+
+    <h2>Comments:</h2>
+    <br>
+
+    <form>
+        <label for="comment">Add Comment</label>
+        <input type="text" id="comment">
+        <button type="submit" id="publish_comment">Publish Comment</button>
+        <button id="delete_comment">Delete A Comment</button>
+    </form>
+    <br>
+    <p id="preview">Comment preview</p>
+    <br>
+    <p id="comment_start">------------------------</p>
+    <br>
+    <button id="dark_mode">Dark Mode</button>
+    <button id="light_mode">Light Mode</button>
+
+</body>
+</html>
