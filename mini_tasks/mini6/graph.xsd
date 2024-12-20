@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="grafai">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="grafas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="virsunes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="virsune">
+                      <xs:complexType>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="briaunos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="briauna">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="pradzia">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="pabaiga">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:key name = "VirsuneKey">
+	<xs:selector xpath = "grafas/virsunes/virsune" />
+	<xs:field xpath = "@id"/>
+  </xs:key>
+  <xs:keyref name="pradziaRef" refer="VirsuneKey">
+	<xs:selector xpath="grafas/briaunos/briauna/pradzia" />
+	<xs:field xpath="@id"/>
+  </xs:keyref>
+  <xs:keyref name="pabaigaRef" refer="VirsuneKey">
+	<xs:selector xpath="grafas/briaunos/briauna/pabaiga" />
+	<xs:field xpath="@id"/>
+  </xs:keyref>
+  </xs:element>
+</xs:schema>

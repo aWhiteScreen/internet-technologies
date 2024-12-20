@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": 
+    {
+      "type": "object",
+      "properties": {
+        "studentId": {
+          "type": "string",
+		  "pattern": "^[A-Z][0-9]{4}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer",
+		  "minimum": 0
+        },
+		"email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+		  "pattern": "^\\+370 [0-9]{3} [0-9]{5}"
+        },
+        "courses": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "studentId",
+        "name",
+        "age",
+        "courses"
+      ]
+    }
+}

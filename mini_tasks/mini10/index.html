@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#rows').on('input', function() {
+        const rows = parseInt($(this).val());
+        const treeElement = $('#tree');
+        console.log(rows);
+        treeElement.text(generateChristmasTree(rows));
+    });
+    function generateChristmasTree(rows) {
+        let tree = '';
+        const maxWidth = 2 * rows - 1;
+
+        for (let i = 0; i < rows; i++) {
+            let spaces = ' '.repeat(rows - i - 1);
+            let stars = '*'.repeat(2 * i + 1);
+            tree += spaces + stars + '\n';
+        }
+        if (rows === 1 || rows === 2) {
+            for (let j = 0; j < 2; j++) {
+                let spaces = ' '.repeat(rows - 1);
+                tree += spaces + '*' + '\n';
+            }
+        } else if (rows >= 3) {
+            console.log("h")
+            const trunkWidth = 3;
+            const trunkSpaces = ' '.repeat(Math.floor((maxWidth - trunkWidth) / 2));
+            for (let j = 0; j < 2; j++) {
+                tree += trunkSpaces + '***' + '\n';
+            }
+        }
+        return tree;
+    }
+});
+</script>
+<body>
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows" name="rows">
+        <pre id="tree"></pre>
+</body>
+</html>
